@@ -26,10 +26,10 @@ defmodule Exlivery.Users.AgentTest do
 
     test "when the user is found, return the user" do
       :user
-      |> build(cpf: "111.111.111-111")
+      |> build(cpf: "111.111.111-11")
       |> UserAgent.save()
 
-      response = UserAgent.get("111.111.111-111")
+      response = UserAgent.get("111.111.111-11")
 
       expected_response =
         {:ok,
